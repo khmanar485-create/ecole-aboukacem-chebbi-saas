@@ -1,0 +1,9 @@
+{
+  "name": "École Aboukacem Chebbi",
+  "short_name": "EAC Scolaire",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f8",
+  "theme_color": "#0b3442",
+  "icons": []
+}

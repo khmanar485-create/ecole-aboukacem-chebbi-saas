@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ecole-aboukacem-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm run db:migrate && npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ecole-aboukacem-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+  - type: web
+    name: ecole-aboukacem-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://REPLACE_WITH_API_HOST/api
+databases:
+  - name: ecole-aboukacem-db
+    databaseName: ecole_saas
+    user: ecole_saas_user
