@@ -24,8 +24,4 @@ services:
     buildCommand: npm install && npm run build
     staticPublishPath: dist
 
-databases:
-  - name: ecole-aboukacem-db
-    plan: free
-    databaseName: ecole_saas
-    user: ecole_saas_user
+
