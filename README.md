@@ -1,6 +1,5 @@
 # École Aboukacem Chebbi — SaaS scolaire multi-écoles
 
-Version révisée selon les décisions : **SaaS multi-écoles**, PostgreSQL avec SQL direct via `pg` (sans Prisma).
 
 ## Stack
 - Frontend : React 18 + Vite
